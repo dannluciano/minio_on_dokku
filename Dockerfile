@@ -3,8 +3,8 @@ FROM golang:1.21-alpine as build
 ARG TARGETARCH="amd64"
 ARG MINIO_VERSION="RELEASE.2024-08-03T04-33-23Z"
 
-ENV GOPATH /go
-ENV CGO_ENABLED 0
+ENV GOPATH=/go
+ENV CGO_ENABLED=0
 
 # Install curl and minisign
 RUN apk add -U --no-cache ca-certificates && \
